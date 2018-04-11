@@ -17,7 +17,8 @@ import zocial from '../icon-list/Zocial';
 export default class IconList extends Component {
 
     state = {
-        iconFamily: undefined
+        iconFamily: undefined,
+        loading: true
     }
 
     async componentWillMount() {
