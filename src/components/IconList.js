@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, FlatList } from 'react-native'
+import Expo from "expo";
 import { Container, Header, Content, View, Icon, Left, Button, Body, Right, Title, Text } from 'native-base';
 import entypo from '../icon-list/Entypo';
 import evilIcons from '../icon-list/EvilIcons';
@@ -19,11 +20,21 @@ export default class IconList extends Component {
         iconFamily: undefined
     }
 
+    async componentWillMount() {
+        await Expo.Font.loadAsync({
+            Roboto: require("native-base/Fonts/Roboto.ttf"),
+            Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+            Ionicons: require("@expo/vector-icons/fonts/Ionicons.ttf"),
+        });
+        this.setState({ loading: false });
+    }
+
     componentDidMount() {
         const { params } = this.props.navigation.state;
         let iconFamily = params.iconFamily;
         this.setState({ iconFamily })
     }
+
 
     getIconList(iconFamily) {
         switch (iconFamily) {
@@ -46,6 +57,10 @@ export default class IconList extends Component {
         const { params } = this.props.navigation.state;
         let iconFamily = params.iconFamily;
         let iconList = this.getIconList(iconFamily)
+
+        if (this.state.loading) {
+            return <Expo.AppLoading />;
+        }
         return (
             <Container>
                 <Header><Left>
