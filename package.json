@@ -1,6 +1,7 @@
 {
-  "name": "icons",
-  "version": "0.1.0",
+  "name": "NativeBaseVectorIconApp 
+",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "jest-expo": "26.0.0",
