@@ -1,26 +1,20 @@
 {
-  "name": "NativeBaseVectorIconApp 
-",
+  "name": "NativeBaseVectorIconApp",
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "jest-expo": "26.0.0",
     "react-native-scripts": "1.13.1",
     "react-test-renderer": "16.3.0-alpha.1"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "jest"
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native"
   },
   "dependencies": {
-    "expo": "^26.0.0",
     "native-base": "https://github.com/GeekyAnts/NativeBase#master",
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.0",
