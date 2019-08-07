@@ -1896,6 +1896,7 @@ export default materialCommunityIcons = [
     "tooltip-text",
     "tooth",
     "tor",
+    "tournament",
     "tower-beach",
     "tower-fire",
     "towing",
