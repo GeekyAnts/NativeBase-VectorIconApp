@@ -294,6 +294,7 @@ export default materialCommunityIcons = [
     "box",
     "box-cutter",
     "box-shadow",
+    "bracket",
     "bridge",
     "briefcase",
     "briefcase-check",
